@@ -1,0 +1,2 @@
+class Goodgymer < ApplicationRecord
+end
