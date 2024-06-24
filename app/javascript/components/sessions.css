@@ -1,0 +1,11 @@
+/* sessions.css */
+.sessions-list {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.sessions-list h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}

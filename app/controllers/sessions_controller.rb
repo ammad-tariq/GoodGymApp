@@ -1,12 +1,17 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:index, :show]
+
   def index
     @sessions = Session.all
-    render json: @sessions
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @sessions.to_json(include: :registrations) }
+    end
   end
 
   def show
     @session = Session.find(params[:id])
-    render json: @session
+    render json: @session.to_json(include: :registrations)
   end
 
   def create

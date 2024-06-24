@@ -74,6 +74,7 @@ module.exports = function(api) {
           loose: true
         }
       ],
+      '@babel/plugin-transform-for-of',
       [
         '@babel/plugin-transform-runtime',
         {

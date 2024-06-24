@@ -1,3 +1,63 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+/* Container for the list of sessions */
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card for each session */
+.session-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Left side of the card */
+.session-info {
+  flex: 1;
+}
+
+/* Session name */
+.session-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Session details */
+.session-details {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Sign up button */
+.sign-up-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sign-up-button:hover {
+  background-color: #e65c00;
+}
+
+/* Additional styles */
+.session-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #eee;
+  background-image: url('path_to_placeholder_image'); /* Replace with a placeholder image path if needed */
+  background-size: cover;
+  background-position: center;
+}
