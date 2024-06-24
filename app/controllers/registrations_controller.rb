@@ -5,7 +5,7 @@ class RegistrationsController < ApplicationController
 
     if session.SocialVisit? && !goodgymer.dbs_verified
       render json: { error: 'You must be DBS verified to sign up for SocialVisit.' }, status: :forbidden
-    elsif session.CommunityMission? && goodgymer.role != 'TaskForce'
+    elsif session.CommunityMission? && goodgymer.TaskForce?
       render json: { error: 'You must be a TaskForce member to sign up for CommunityMission.' }, status: :forbidden
     else
       @registration = Registration.new(registration_params)
